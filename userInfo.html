@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Boxes - Level</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/mon1.png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .swal2-container h2 {
+        font-size: 20px;
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body  style="height: 100vh !important">
+    <h1>Welcome Shooter!</h1>
+    <div class="container">
+      <!-- Printing User Message -->
+      <div id="userInfo">
+        <p class="welcome"></p>
+        <p class="score"></p>
+      </div>
+      <div class="form-group">
+        <label for="selectLv">Choose Level</label>
+        <select class="selection" id="selectLv" name="level" required autofocus>
+          <option disabled selected>Level</option>
+          <option value="1">Easy</option>
+          <option value="2">Hard</option>
+        </select>
+      </div>
+      <button id="startGameBtn">Start Game</button>
+    </div>
+    
+    <!-- Sound -->
+    <div class="sound">
+      <img src="images/sound-off.png" alt="sound">
+      <audio id="playSound" src="sound/full.wav" type="audio/wav" preload="auto" loop></audio>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utilities.js"></script>
+    <script src="js/userInfo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

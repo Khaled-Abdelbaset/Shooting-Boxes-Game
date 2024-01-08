@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shooting Boxes</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/mon1.png">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+  <body style="height: 100vh !important">
+    <div class="game-box">
+      <div class="timer"><span class="min">00</span>:<span class="sec">00</span></div>
+      <div class="user-data">
+        <p>Gamer Name: <span class="user-name"></span></p>
+        <div class="user-score">
+          <p class="score">Score <span id="liveScore"> 0</span></p>
+          <p class="score">Last Score <span class="lastScore">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/ship.js"></script>
+    <script type="module" src="js/enemy.js"></script>
+    <script type="module" src="js/bullet.js"></script>
+    <script type="module" src="js/game.js"></script>
+    <script type="module" src="js/startGame.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
