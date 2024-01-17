@@ -14,6 +14,7 @@ export default class Game {
     this.gameBox = gameBox;
     this.options = options;
     this.winner = false;
+    this.stopShotting = false;
     this.bullet = null;
     this.enemyObj = null;
     this.spaceShip = new Ship(this.gameBox, 'images/ship.png');
@@ -129,10 +130,9 @@ export default class Game {
   // Shooting Bullet
   shootBullet() {
     document.addEventListener('keyup', (event) => {
-      if (event.key === ' ') {
-        event.preventDefault();
-        this.playSound("fire.mp3");
+      if (event.key === ' ' && !this.stopShotting) {
         this.createBullet();
+        this.playSound("fire.mp3");
       }
     });
   }
@@ -223,6 +223,7 @@ export default class Game {
   gameOver() {
     clearInterval(this.moveTime);
     clearInterval(this.timer);
+    this.stopShotting = true;
 
     setTimeout(()=> {
       localStorage.setItem(`score_${localStorage.getItem('username')}`, Game.#score);
